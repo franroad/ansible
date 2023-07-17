@@ -12,3 +12,17 @@
         name: "podman"
         state: present
       become: true
+
+    - name: Login to registry and create ${XDG_RUNTIME_DIR}/containers/auth.json
+      containers.podman.podman_login:
+        username: acrlabfran
+        password: 'xxx'
+        registry: acrlabfran.azurecr.io
+      become: true
+
+    - name: Pull an image
+      containers.podman.podman_image:
+        name: acrlabfran.azurecr.io/nginx:casopractico2
+      become: true
+    
+    
