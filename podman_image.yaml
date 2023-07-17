@@ -1,0 +1,14 @@
+- hosts: webservers
+  tasks:
+    - name: Update cache 
+      yum:
+       update_cache: true
+      become: true
+
+
+
+    - name: Install podman
+      ansible.builtin.yum:
+        name: "podman"
+        state: present
+      become: true
