@@ -16,7 +16,7 @@
     - name: Login to registry and create ${XDG_RUNTIME_DIR}/containers/auth.json
       containers.podman.podman_login:
         username: acrlabfran
-        password: 'pSNOig8T3BhEFaMP7/H7JodAQov30VcJBDHOzD4xi3+ACRBq7uVi'
+        password: 'xxx'
         registry: acrlabfran.azurecr.io
       become: true
 
