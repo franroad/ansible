@@ -16,7 +16,7 @@
     - name: Login to registry and create ${XDG_RUNTIME_DIR}/containers/auth.json
       containers.podman.podman_login:
         username: acrlabfran
-        password: 'xxx'
+        password: '+DFumg9nFa/w2Mk6bLx74lkLELQc4wU9aOvL9IQBjK+ACRCAyrxK'
         registry: acrlabfran.azurecr.io
       become: true
 
@@ -31,10 +31,11 @@
         image: acrlabfran.azurecr.io/nginx:casopractico2
         state: started
         detach: true
+        net: host
         exposed_ports:
          - 443
         ports:
-         - 80:443
+        
          - 443:443
       become: true
 
