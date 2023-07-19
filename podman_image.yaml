@@ -37,6 +37,7 @@
         ports:
         
          - 443:443
+        restart_policy: "always"
       become: true
 
     - name: Allow all access to tcp port 80 and 443
