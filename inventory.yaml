@@ -1,6 +1,0 @@
-all:
-    children:
-      webservers:
-          hosts:
-            20.90.83.103 
-            ansible_user:azureuser
