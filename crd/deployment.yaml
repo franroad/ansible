@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: jenkins/jenkins:lts
+        image: acrlabfran.azurecr.io/jenkins:casopractico2
         ports:
           - name: http-port
             containerPort: 8080
