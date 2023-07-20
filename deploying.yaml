@@ -11,4 +11,17 @@
       kubernetes.core.k8s:
        state: present
        src: crd/pvc.yaml
+
+    
+    - name: create deployment
+      kubernetes.core.k8s:
+       state: present
+       src: crd/deployment.yaml
+    
+    
+    - name: create service
+      kubernetes.core.k8s:
+       state: present
+       src: crd/svc.yaml
+    
   
