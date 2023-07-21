@@ -40,8 +40,16 @@
         restart_policy: "always"
       become: true
 
+    - name: Install a latest ufw
+      yum:
+       name: ufw
+       state: latest
+      become: true 
+
+
     - name: Allow all access to tcp port 80 and 443
       community.general.ufw:
+        state: enabled
         rule: allow
         port: '80,443'
         proto: tcp
